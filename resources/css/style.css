@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/*HEADER*/
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 3rem;
+    text-align: center;
+    line-height: 5rem;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width:8%;
+    height: auto;
+    align-self: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #36bef0d2;
+    font-size: x-large;
+}
+
+
+
+/*MAIN*/
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+section:nth-child(even) {
+    background: linear-gradient(gray, rgb(62, 167, 212));
+    color: white;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+/*Custom for divs*/
+
+#search, #forecast, #current, #alerts {
+    width: 95%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Search section*/
+
+#search form {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#city-search {
+    width: 60%;
+    height: 3.5rem;
+}
+
+#city-search input {
+    width: 70%;
+    height: 3rem;
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+#city-search button {
+    width: 15%;
+    height: 2rem;
+    background-color: #045f80;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+/*Current weather section*/
+
+.cityWeather {
+    width: 100%;
+    line-height: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cityWeather #nombre_ciudad {
+    color: rgb(243, 179, 18);
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.688);
+    text-shadow: 4px 2px black;
+}
+
+.cityWeather p {
+    font-size: 1.2rem;
+}
+
+#current-weather {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#current-weather img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+}
+
+.details {
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.cityWeather .temp_actual {
+    font-size: 1.7rem;
+}
+
+.amanecer, .puesta {
+    display: flex;
+    align-items: center;
+}
+  
+.amanecer svg {
+    width: 13%;
+    height: auto;
+}  
+
+.puesta svg {
+    width: 13%;
+    height: auto;
+}  
+
+/*5-DAY Forecast section*/
+
+#daily-forecast {
+    width: 95%;
+    padding: 2rem 0;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+
+#daily-forecast .forecast-day {
+    flex: 1; /* Equal width for each forecast day */
+    height: auto; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin: 0 0.5rem;
+    padding: 0.5rem; 
+    background: linear-gradient(to bottom, #f0f8ff, #9b9bbd);
+    font-size: 1.3rem;
+}
+
+#daily-forecast .forecast-day h4 {
+    text-decoration: underline;
+    color: rgb(1, 1, 105);
+}

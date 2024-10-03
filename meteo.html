@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Fernanda M ontalvan">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="shortcut icon" href="resources/img/thermometer-temperature-svgrepo-com.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div>
+          <h1>Welcome to My Weather App</h1> 
+          <img src="resources/img/dia soleado.svg" alt="" class="sol">  
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div id="weather-icons"></div>
+
+            <div id="weather-location"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div id="search">
+                <form action="" method="post">
+                    <h2>Search for a city</h2>
+                    <div id="city-search">
+                        <input type="text" id="city" placeholder="Enter a city name">
+                        <button type="submit" onclick="searchWeather()" title="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"/>
+                            <path d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11"/>
+                          </svg></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <div id="current-weather">
+                <p id="nombre_ciudad"><strong>Barcelona</strong></p>
+                <p class="temp_actual">Current Temperature: <span>23°C</span></p>
+                <div>
+                    
+                    <p class="temp_min">Min Temp: <span>22°C</span></p>
+                    <p class="temp_max">Max Temp: <span>25°C</span></p>
+                    <p class="humedad"> Humidity: <span>68%</span></p>
+                    <p class="amanecer"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-sunrise-fill" viewBox="0 0 16 16">
+                        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                        </svg><span>7:50</span></p>
+                    <p class="puesta"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-sunset-fill" viewBox="0 0 16 16">
+                        <path d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM11.709 11.5a4 4 0 1 0-7.418 0H.5a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+                        </svg>17:30</p>  
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div id="forecast">
+                <h3>5-Day Forecast</h3>
+                <div id="daily-forecast">
+                    <div>Sunday</div>
+                    <div>Monday</div>
+                    <div>Tuesday</div>
+                    <div>Wednesday</div>
+                    <div>Thursday</div>
+                    <div>Friday</div>
+                    <div>Saturday</div>
+                </div>  
+            </div>
+        </section>
+
+        <section>
+            <div id="alerts">
+                <h3>Weather Alerts</h3>
+                <div id="weather-alerts"></div>  
+            </div>
+        </section>        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyWeatherApp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
