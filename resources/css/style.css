@@ -6,7 +6,7 @@
 
 body {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /*HEADER*/
@@ -14,9 +14,13 @@ body {
 header {
     background-color: #333;
     color: #fff;
-    padding: 3rem;
+    padding: 2.5rem;
     text-align: center;
-    line-height: 5rem;
+    line-height: 4rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 header div {
@@ -26,7 +30,7 @@ header div {
 }
 
 header img {
-    width:8%;
+    width:6%;
     height: auto;
     align-self: center;
 }
@@ -51,13 +55,18 @@ header a:hover {
 
 /*MAIN*/
 
+main {
+    
+    padding-top: 17rem;
+}
+
 section {
     display: flex;
     justify-content: center;
 }
 
 section:nth-child(even) {
-    background: linear-gradient(gray, rgb(62, 167, 212));
+    background: linear-gradient(white, rgb(194, 193, 193), rgb(62, 167, 212));
     color: white;
 }
 
@@ -123,8 +132,8 @@ section h2 {
 .cityWeather #nombre_ciudad {
     color: rgb(243, 179, 18);
     font-size: 2.5rem;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.688);
-    text-shadow: 4px 2px black;
+    -webkit-text-stroke: 1px rgb(233, 217, 217);
+    text-shadow: 5px 2px rgba(0, 0, 0, 0.659);
 }
 
 .cityWeather p {
@@ -195,11 +204,19 @@ section h2 {
     border-radius: 30px;
     margin: 0 0.5rem;
     padding: 0.5rem; 
-    background: linear-gradient(to bottom, #f0f8ff, #9b9bbd);
+    background: linear-gradient(to bottom, #f7f7f7, #9b9bbd);
     font-size: 1.3rem;
+    line-height: 2rem
 }
 
 #daily-forecast .forecast-day h4 {
-    text-decoration: underline;
     color: rgb(1, 1, 105);
+}
+
+/*Alerts Section*/
+
+/*Footer*/
+
+footer {
+    padding: 2rem 0;
 }

@@ -134,8 +134,8 @@ $daily_forecast = array_values($daily_forecast);
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#forecast">Forecast</a></li>
+                <li><a href="#alerts">Alerts</a></li>
             </ul>
 
             <div id="weather-icons"></div>
@@ -190,7 +190,7 @@ $daily_forecast = array_values($daily_forecast);
                 <div id="daily-forecast">
                     <?php foreach ($daily_forecast as $data): ?>
                     <div class="forecast-day">
-                        <h4><?php echo $data['day']; ?> (<?php echo date('Y-m-d', strtotime($data['date'])); ?>)</h4> <br>
+                        <h4><?php echo $data['day']; ?> (<?php echo date('m-d', strtotime($data['date'])); ?>)</h4> <br>
                         <p><strong>Temperature: <br></strong> <?php echo $data['temp_min']; ?> - <?php echo $data['temp_max']; ?>°C</p>
                         <p><strong>Expected Weather:</strong> <br><?php echo $data['description']; ?></p><br>
                         <img src="http://openweathermap.org/img/wn/<?php echo $data['icon']; ?>.png" alt="<?php echo $data['description']; ?>">
